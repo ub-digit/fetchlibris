@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# Arbetskataloger
-base_dir="/home/david/work/fetchlibris"
-out_dir="$base_dir/in"
-log_dir="$base_dir/log"
-begun_dir="$base_dir/begun"
+script_dir="$(dirname "$(readlink -f "$0")")"
+source "$script_dir/fetchlibris.sh.conf"
 
 # Datumformat ex. 20020401
 today=`date +%Y%m%d`
@@ -46,9 +43,6 @@ ftp="/usr/bin/ncftpget -d $debug_log_file -V"
 # Sökväg på LIBRIS ftp-server
 server="ftp.libris.kb.se"
 remote_path="/pub/export2/GUB/marc/"
-
-# E-postmottagare
-mail_user="gunda@ub.gu.se,isabel.folkesson@ub.gu.se,martin.oxelqvist@ub.gu.se"
 
 cd $out_dir
 for file_name in $remote_files; do

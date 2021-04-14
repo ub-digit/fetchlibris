@@ -1,0 +1,11 @@
+
+data_dir="/opt/fetchlibris"
+
+# Arbetskataloger
+out_dir="$data_dir/in"
+log_dir="$data_dir/log"
+begun_dir="$data_dir/begun"
+
+# E-postmottagare
+mail_user="gunda@ub.gu.se,isabel.folkesson@ub.gu.se,martin.oxelqvist@ub.gu.se"
+
