@@ -44,7 +44,7 @@ ftp="/usr/bin/ncftpget -d $debug_log_file -V"
 server="ftp.libris.kb.se"
 remote_path="/pub/export2/GUB/marc/"
 
-cd $out_dir
+cd $done_dir
 for file_name in $remote_files; do
   # Hämta filen och lagra exitstatus
   echo `date` "Försöker att hämta librisfilen \"$file_name\"..." >> $log_file
