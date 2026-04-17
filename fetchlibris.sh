@@ -1,7 +1,13 @@
 #!/bin/bash
 
-script_dir="$(dirname "$(readlink -f "$0")")"
-source "$script_dir/fetchlibris.sh.conf"
+if [ -z "$1" ]; then
+  script_dir="$(dirname "$(readlink -f "$0")")"
+  conf_file="$script_dir/fetchlibris.sh.conf"
+else
+  conf_file="$1"
+fi
+
+source "$conf_file"
 
 # Datumformat ex. 20020401
 today=`date +%Y%m%d`
